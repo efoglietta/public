@@ -1,0 +1,122 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title></title>
+    <style>
+        span {
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .divBase{
+              display: inline-block;
+             border: 1px solid black;
+        }
+        .primaColonna {
+            width: 300px;           
+        }
+
+        .secondaColonna {
+            width: 100px;
+            
+        }
+
+        .terzaColonna {
+            width: 100px;
+           
+        }
+    </style>
+    <script>
+        window.onload = bodyCaricato;
+
+        function bodyCaricato() {
+           
+            var prodotti = [
+                { "productname": "Chai", "unitprice": 18.0000, "unitsinstock": 139 },
+                { "productname": "Chang", "unitprice": 19.0000, "unitsinstock": 17 },
+                { "productname": "Aniseed Syrup", "unitprice": 10.0000, "unitsinstock": 13 },
+                { "productname": "Chef Anton's Cajun Seasoning", "unitprice": 22.0000, "unitsinstock": 53 }, { "productname": "Chef Anton's Gumbo Mix", "unitprice": 21.3500, "unitsinstock": 0 }, { "productname": "Grandma's Boysenberry Spread", "unitprice": 25.0000, "unitsinstock": 120 }, { "productname": "Uncle Bob's Organic Dried Pears", "unitprice": 30.0000, "unitsinstock": 15 }, { "productname": "Northwoods Cranberry Sauce", "unitprice": 40.0000, "unitsinstock": 6 }, { "productname": "Mishi Kobe Niku", "unitprice": 97.0000, "unitsinstock": 29 }, { "productname": "Ikura", "unitprice": 31.0000, "unitsinstock": 31 }, { "productname": "Queso Cabrales", "unitprice": 21.0000, "unitsinstock": 22 }, { "productname": "Queso Manchego La Pastora", "unitprice": 38.0000, "unitsinstock": 86 }, { "productname": "Konbu", "unitprice": 6.0000, "unitsinstock": 24 }, { "productname": "Tofu", "unitprice": 23.2500, "unitsinstock": 35 }, { "productname": "Genen Shouyu", "unitprice": 15.5000, "unitsinstock": 39 }, { "productname": "Pavlova", "unitprice": 17.4500, "unitsinstock": 29 }, { "productname": "Alice Mutton", "unitprice": 39.0000, "unitsinstock": 0 }, { "productname": "Carnarvon Tigers", "unitprice": 62.5000, "unitsinstock": 42 }, { "productname": "Teatime Chocolate Biscuits", "unitprice": 9.2000, "unitsinstock": 25 }, { "productname": "Sir Rodney's Marmalade", "unitprice": 81.0000, "unitsinstock": 40 }, { "productname": "Sir Rodney's Scones", "unitprice": 10.0000, "unitsinstock": 3 }, { "productname": "Gustaf's Knäckebröd", "unitprice": 21.0000, "unitsinstock": 104 }, { "productname": "Tunnbröd", "unitprice": 9.0000, "unitsinstock": 61 }, { "productname": "Guaraná Fantástica", "unitprice": 4.5000, "unitsinstock": 20 }, { "productname": "NuNuCa Nuß-Nougat-Creme", "unitprice": 14.0000, "unitsinstock": 76 }, { "productname": "Gumbär Gummibärchen", "unitprice": 31.2300, "unitsinstock": 15 }, { "productname": "Schoggi Schokolade", "unitprice": 43.9000, "unitsinstock": 49 }, { "productname": "Rössle Sauerkraut", "unitprice": 45.6000, "unitsinstock": 26 }, { "productname": "Thüringer Rostbratwurst", "unitprice": 123.7900, "unitsinstock": 0 }, { "productname": "Nord-Ost Matjeshering", "unitprice": 25.8900, "unitsinstock": 10 }, { "productname": "Gorgonzola Telino", "unitprice": 12.5000, "unitsinstock": 0 }, { "productname": "Mascarpone Fabioli", "unitprice": 32.0000, "unitsinstock": 9 }, { "productname": "Geitost", "unitprice": 2.5000, "unitsinstock": 112 }, { "productname": "Sasquatch Ale", "unitprice": 14.0000, "unitsinstock": 111 }, { "productname": "Steeleye Stout", "unitprice": 18.0000, "unitsinstock": 20 }, { "productname": "Inlagd Sill", "unitprice": 19.0000, "unitsinstock": 112 }, { "productname": "Gravad lax", "unitprice": 26.0000, "unitsinstock": 11 }, { "productname": "Côte de Blaye", "unitprice": 263.5000, "unitsinstock": 17 }, { "productname": "Chartreuse verte", "unitprice": 18.0000, "unitsinstock": 69 }, { "productname": "Boston Crab Meat", "unitprice": 18.4000, "unitsinstock": 123 }, { "productname": "Jack's New England Clam Chowder", "unitprice": 9.6500, "unitsinstock": 85 }, { "productname": "Singaporean Hokkien Fried Mee", "unitprice": 14.0000, "unitsinstock": 26 }, { "productname": "Ipoh Coffee", "unitprice": 46.0000, "unitsinstock": 17 }, { "productname": "Gula Malacca", "unitprice": 19.4500, "unitsinstock": 27 }, { "productname": "Rogede sild", "unitprice": 9.5000, "unitsinstock": 5 }, { "productname": "Spegesild", "unitprice": 12.0000, "unitsinstock": 95 }, { "productname": "Zaanse koeken", "unitprice": 9.5000, "unitsinstock": 36 }, { "productname": "Chocolade", "unitprice": 12.7500, "unitsinstock": 15 }, { "productname": "Maxilaku", "unitprice": 20.0000, "unitsinstock": 10 }, { "productname": "Valkoinen suklaa", "unitprice": 16.2500, "unitsinstock": 65 }, { "productname": "Manjimup Dried Apples", "unitprice": 53.0000, "unitsinstock": 20 }, { "productname": "Filo Mix", "unitprice": 7.0000, "unitsinstock": 38 }, { "productname": "Perth Pasties", "unitprice": 32.8000, "unitsinstock": 0 }, { "productname": "Tourtière", "unitprice": 7.4500, "unitsinstock": 21 }, { "productname": "Pâté chinois", "unitprice": 24.0000, "unitsinstock": 115 }, { "productname": "Gnocchi di nonna Alice", "unitprice": 38.0000, "unitsinstock": 21 }, { "productname": "Ravioli Angelo", "unitprice": 19.5000, "unitsinstock": 36 }, { "productname": "Escargots de Bourgogne", "unitprice": 13.2500, "unitsinstock": 62 }, { "productname": "Raclette Courdavault", "unitprice": 55.0000, "unitsinstock": 79 }, { "productname": "Camembert Pierrot", "unitprice": 34.0000, "unitsinstock": 19 }, { "productname": "Sirop d'érable", "unitprice": 28.5000, "unitsinstock": 113 }, { "productname": "Tarte au sucre", "unitprice": 49.3000, "unitsinstock": 17 }, { "productname": "Vegie-spread", "unitprice": 43.9000, "unitsinstock": 24 }, { "productname": "Wimmers gute Semmelknödel", "unitprice": 33.2500, "unitsinstock": 22 }, { "productname": "Louisiana Fiery Hot Pepper Sauce", "unitprice": 21.0500, "unitsinstock": 76 }, { "productname": "Louisiana Hot Spiced Okra", "unitprice": 17.0000, "unitsinstock": 4 }, { "productname": "Laughing Lumberjack Lager", "unitprice": 14.0000, "unitsinstock": 52 }, { "productname": "Scottish Longbreads", "unitprice": 12.5000, "unitsinstock": 6 }, { "productname": "Gudbrandsdalsost", "unitprice": 36.0000, "unitsinstock": 26 }, { "productname": "Outback Lager", "unitprice": 15.0000, "unitsinstock": 15 }, { "productname": "Flotemysost", "unitprice": 21.5000, "unitsinstock": 26 }, { "productname": "Mozzarella di Giovanni", "unitprice": 34.8000, "unitsinstock": 14 }, { "productname": "Röd Kaviar", "unitprice": 15.0000, "unitsinstock": 101 }, { "productname": "Longlife Tofu", "unitprice": 10.0000, "unitsinstock": 4 }, { "productname": "Rhönbräu Klosterbier", "unitprice": 7.7500, "unitsinstock": 125 }, { "productname": "Lakkalikööri", "unitprice": 18.0000, "unitsinstock": 57 }, { "productname": "Original Frankfurter grüne Soße", "unitprice": 13.0000, "unitsinstock": 32 }, { "productname": "Mele", "unitprice": 5.0000, "unitsinstock": 0 }]
+
+            //var html = "<div>";
+            //html += "<span class='primaColonna'";
+            //html += "<strong>nome</strong>";
+            //html += "</span>";
+            //html += "<span class='secondaColonna'> ";
+            //html += "<strong>prezzo</strong>";
+            //html += "</span>";
+            //html += "<span class='terzaColonna'>";
+            //html += "<strong>giacenza</strong>";
+            //html += "</span>";
+            //html += "</div>";
+            //for (var i = 0; i < prodotti.length; i++) {
+            //    html += "<div>";
+            //    html += "<span class='primaColonna'>";
+            //    html += prodotti[i].productname;
+            //    html += "</span>";
+            //    html += "<span class='secondaColonna'>";
+            //    html += prodotti[i].unitprice;
+            //    html += "</span>";
+            //    html += "<span class='terzaColonna'>";
+            //    html += prodotti[i].unitsinstock;
+            //    html += "</span>";
+            //    html += "</div>";
+            //}
+
+
+            //solo DIV
+
+            var html = "<div>";
+            html += "<div class='primaColonna divBase'";
+            html += "<strong>nome</strong>";
+            html += "</div>";
+            html += "<div class='secondaColonna divBase'> ";
+            html += "<strong>prezzo</strong>";
+            html += "</div>";
+            html += "<div class='terzaColonna divBase'>";
+            html += "<strong>giacenza</strong>";
+            html += "</div>";
+            html += "</div>";
+            for (var i = 0; i < prodotti.length; i++) {
+                html += "<div>";
+                html += "<div class='primaColonna divBase'>";
+                html += prodotti[i].productname;
+                html += "</div>";
+                html += "<div class='secondaColonna divBase'>";
+                html += prodotti[i].unitprice;
+                html += "</div>";
+                html += "<div class='terzaColonna divBase'>";
+                html += prodotti[i].unitsinstock;
+                html += "</div>";
+                html += "</div>";
+            }
+
+
+
+            document.getElementById("griglia").innerHTML = html;
+
+            var bottone = document.getElementById("apri");
+            bottone.onclick = function () {
+                location.href = "javascript.aspx?productid=1&unitprice=10";
+            }
+
+
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="griglia">
+        </div>
+    </form>
+    <a href="JQuery.aspx">pagina jquery</a>
+    <input type="button" id="apri" value="pagina javascript" />
+</body>
+</html>
